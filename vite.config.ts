@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  alias: {
-    src: "/src",
-  },
+  resolve: {
+    alias: {
+      src: "/src",
+    },
+  }
 })
