@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@tanstack/react-query': ^5.14.6
   '@testing-library/react': ^14.1.2
   '@types/node': ^20.10.5
   '@types/react': ^18.2.43
@@ -20,6 +21,7 @@ specifiers:
   vitest: ^1.1.0
 
 dependencies:
+  '@tanstack/react-query': 5.14.6_react@18.2.0
   axios: 1.6.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -707,6 +709,19 @@ packages:
   /@sinclair/typebox/0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
+
+  /@tanstack/query-core/5.14.2:
+    resolution: {integrity: sha512-QmoJvC72sSWs3hgGis8JdmlDvqLfYGWUK4UG6OR9Q6t28JMN9m2FDwKPqoSJ9YVocELCSjMt/FGjEiLfk8000Q==}
+    dev: false
+
+  /@tanstack/react-query/5.14.6_react@18.2.0:
+    resolution: {integrity: sha512-+INnJdq/904d+K2XQjqdIC58glpNGfQ8Xz93M6WBeJs5FPGFV8SEuFVzPtW/bKZ/Hu7hAiJpbFLDg5Lysvwmuw==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-core': 5.14.2
+      react: 18.2.0
+    dev: false
 
   /@testing-library/dom/9.3.3:
     resolution: {integrity: sha512-fB0R+fa3AUqbLHWyxXa2kGVtf1Fe1ZZFr0Zp6AIbIAzXb2mKbEXl+PCQNUOaq5lbTab5tfctfXRNsWXxa2f7Aw==}
