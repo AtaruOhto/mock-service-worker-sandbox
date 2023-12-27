@@ -1,13 +1,24 @@
 import axios from 'axios';
-import { useMemo } from 'react';
+import { useEffect, useState } from 'react';
     
 export const useColors = () => {
+  
+  const [colors, setColors] = useState([]);
 
-  const colors = useMemo(async() => 
-    await axios.get('/api/colors')
-  , []);
+  const fetchColors = async() => {
+    const colors = await axios.get('/api/colors')
+    console.log('useColors useEffect')
+    setColors(colors.data)
+  }
+  
+  useEffect(() => {
+    fetchColors()
+  }, []);
+
+
   
   return {
-    colors
+    colors,
+    fetchColors
   }
 };

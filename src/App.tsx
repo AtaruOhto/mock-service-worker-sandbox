@@ -1,8 +1,9 @@
 import './App.css'
+import { ColorsPage } from './pages/ColorsPage'
 
 function App() {
   return (
-    <div>MSW</div>
+    <ColorsPage /> 
   )
 }
 

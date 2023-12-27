@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
-if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   const { worker } = await import('src/mocks/browser')  
 
   // `worker.start()` returns a Promise that resolves
