@@ -1,24 +1,19 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
     
-export const useColors = () => {
-  
+export const useColors = () => {  
   const [colors, setColors] = useState([]);
-
-  const fetchColors = async() => {
-    const colors = await axios.get('/api/colors')
-    console.log('useColors useEffect')
-    setColors(colors.data)
-  }
   
   useEffect(() => {
-    fetchColors()
+    (async() => {
+      // https://github.com/vitest-dev/vitest/issues/4730
+      // Vitest 1.0.2 broke happy-dom with msw + axios 
+      const res = await fetch('/api/colors')
+      const colors = await res.json()
+      setColors(colors)
+    })()
   }, []);
 
-
-  
   return {
-    colors,
-    fetchColors
+    colors
   }
 };
